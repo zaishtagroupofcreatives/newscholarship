@@ -142,8 +142,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const formData = new FormData(event.target);
       try {
-        console.log("Sending POST to http://localhost:3000/submit");
-        const response = await fetch("http://localhost:3000/submit", {
+        console.log("Sending POST to https://newscholarship-kqt4.vercel.app/submit");
+        const response = await fetch("https://newscholarship-kqt4.vercel.app/submit", {
           method: "POST",
           body: formData,
         });
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch (error) {
         console.error("Fetch error:", error);
         alert(
-          `Error submitting form: ${error.message}. Ensure you access the form via http://localhost:3000 and the server is running.`
+          `Error submitting form: ${error.message}. Ensure you access the form via https://newscholarship-kqt4.vercel.app/ and the server is running.`
         );
       }
     });
