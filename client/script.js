@@ -1,4 +1,3 @@
-// D:\Scholarship Form\client\script.js
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize floating labels
   function initFloatingLabels() {
@@ -142,8 +141,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const formData = new FormData(event.target);
       try {
-        console.log("Sending POST to https://newscholarship-kqt4.vercel.app/");
-        const response = await fetch("https://newscholarship-kqt4.vercel.app/", {
+        console.log("Sending POST to /api/submit");
+        const response = await fetch("/api/submit", {
           method: "POST",
           body: formData,
         });
@@ -170,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch (error) {
         console.error("Fetch error:", error);
         alert(
-          `Error submitting form: ${error.message}. Ensure you access the form via https://newscholarship-kqt4.vercel.app/ and the server is running.`
+          `Error submitting form: ${error.message}. Please ensure your backend is reachable.`
         );
       }
     });
@@ -178,4 +177,3 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Form with ID 'scholarshipForm' not found.");
   }
 });
-
