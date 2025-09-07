@@ -6,8 +6,18 @@
       "use": "@vercel/static"
     },
     {
-      "src": "server/server.js",
+      "src": "server/server.js",  // or your entry point file for backend
       "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "client/$1"
     }
   ]
 }
