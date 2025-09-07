@@ -142,8 +142,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const formData = new FormData(event.target);
       try {
-        console.log("Sending POST to https://newscholarship-kqt4.vercel.app/submit");
-        const response = await fetch("https://newscholarship-kqt4.vercel.app/submit", {
+        console.log("Sending POST to https://newscholarship-kqt4.vercel.app/");
+        const response = await fetch("https://newscholarship-kqt4.vercel.app/", {
           method: "POST",
           body: formData,
         });
@@ -178,3 +178,4 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Form with ID 'scholarshipForm' not found.");
   }
 });
+
