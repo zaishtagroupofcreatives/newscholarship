@@ -6,7 +6,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "server/server.js",  // or your entry point file for backend
+      "src": "server/server.js",  
       "use": "@vercel/node"
     }
   ],
